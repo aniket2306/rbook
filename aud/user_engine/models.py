@@ -42,7 +42,7 @@ class ProfileData(models.Model):
     followersCount = models.IntegerField(blank=True, null=False, default=0)
     followingCount = models.IntegerField(blank=True, null=False, default=0)
 
-class AudioBookListItem(models.Model):
+class BookListItem(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     book = models.ForeignKey(Book, on_delete=models.CASCADE)
     status = models.CharField(max_length=100, choices=STATUS_CHOICES, blank=True, null=False, db_index=True, default= 'CL')
@@ -61,7 +61,7 @@ class RecommendedBook(models.Model):
 
 class FavouritesList(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    item = models.ForeignKey(AudioBookListItem, on_delete = models.CASCADE)
+    item = models.ForeignKey(BookListItem, on_delete = models.CASCADE)
     add_date = models.DateTimeField(blank=True, null=True)
 
 class Following(models.Model):
