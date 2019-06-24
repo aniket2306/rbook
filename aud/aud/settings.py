@@ -41,12 +41,17 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     #installed apps
-    'debug_toolbar',
+    # 'debug_toolbar',
 
     #custom module
     'core',
     'user_engine'
 ]
+
+try:
+    INSTALLED_APPS + 'debug_toolbar'
+except:
+    print("consider installing django debug toolbar for better debugging")
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
