@@ -48,10 +48,7 @@ INSTALLED_APPS = [
     'user_engine'
 ]
 
-try:
-    INSTALLED_APPS + 'debug_toolbar'
-except:
-    print("consider installing django debug toolbar for better debugging")
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
