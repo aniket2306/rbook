@@ -1,0 +1,15 @@
+{
+  "name": "aud",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"python manage.py runserver",
+    "migrate":"python manage.py makemigrations && python manage.py migrate"
+  },
+  "author": "",
+  "license": "ISC",
+  "info":"This file just uses npm to prevent writing too many commands, the project is totally fine without this file"
+}
+
