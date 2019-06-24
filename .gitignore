@@ -126,5 +126,4 @@ dmypy.json
 .vscode/
 
 #django static
-static_cdn/
 migrations/
