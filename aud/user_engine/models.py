@@ -1,6 +1,6 @@
 
 #postgress only field
-from django.contrib.postgres.fields import ArrayField
+#from django.contrib.postgres.fields import ArrayField
 
 #normal fields
 from django.db import models
