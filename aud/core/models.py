@@ -1,7 +1,7 @@
 from django.db import models
 
 #postgress only field
-from django.contrib.postgres.fields import ArrayField
+#from django.contrib.postgres.fields import ArrayField
 from django.contrib.auth import get_user_model
 
 
