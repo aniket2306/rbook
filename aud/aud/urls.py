@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf import settings
 from django.contrib import admin
 from django.urls import path, include
-import debug_toolbar
+# import debug_toolbar
 from core import urls as core_urls
 from user_engine import urls as user_engine
 
@@ -25,7 +25,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('__debug__/', include(debug_toolbar.urls)),
+    # path('__debug__/', include(debug_toolbar.urls)),
     path('user/', include(user_engine)),
     path('',include(core_urls)),
 ]
