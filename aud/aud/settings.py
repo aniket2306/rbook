@@ -45,7 +45,10 @@ INSTALLED_APPS = [
 
     #custom module
     'core',
-    'user_engine'
+    'user_engine',
+
+    #accounts
+    'accounts',
 ]
 
 
