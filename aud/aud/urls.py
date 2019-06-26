@@ -17,8 +17,8 @@ from django.conf import settings
 from django.contrib import admin
 from django.urls import path, include
 # import debug_toolbar
-from core import urls as core_urls
-from user_engine import urls as user_engine
+# from core import urls as core_urls
+# from user_engine import urls as user_engine
 
 from django.conf import settings
 from django.conf.urls.static import static
@@ -28,8 +28,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # path('__debug__/', include(debug_toolbar.urls)),
     url(r'^accounts/',include('accounts.urls')),
-    path('user/', include(user_engine)),
-    path('',include(core_urls)),
+    path('user/', include('user_engine.urls')),
+    path('',include('core.urls')),
 ]
 
 if settings.DEBUG:

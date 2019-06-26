@@ -2,12 +2,15 @@
 {% load static %}
 {% block middle %}
 	<h1>Login</h1>
-	<form class="site-form" action="/accounts/login/" method="post">
+	<form class="ui form" action="/accounts/login/" method="post">
 		{% csrf_token %}
 		{{form}}
 		{% if request.GET.next %}
 			<input type="hidden" name="next" value="{{request.GET.next}}">
 		{% endif %}
-		<input type="submit" value="Login">
+		<br/>
+		<br/>
+		<input type="submit" class='ui button positive' value="Login">
+		<a href="{% url 'accounts:signup' %}" class='ui small primary button'>Register</a>
 	</form>
 {% endblock %}

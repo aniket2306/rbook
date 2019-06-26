@@ -2,9 +2,10 @@
 {% load static %}
 {% block middle %}
 	<h1>Signup</h1>
-	<form class="site-form" action="/accounts/signup/" method="post">
+	<form class="ui form" action="/accounts/signup/" method="post">
 		{% csrf_token %}
 		{{form}}
-		<input type="submit" value="Signup">
+		<br/>
+		<input type="submit" value="Signup" class='ui button primary'>
 	</form>
 {% endblock %}
